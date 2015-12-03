@@ -1,0 +1,261 @@
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+
+// 1 - TOOLS
+@import '1-tools/bourbon/bourbon'
+@import '1-tools/fonts'
+@import '1-tools/normalize'
+@import '1-tools/vars'
+
+
+// 2 - BASICS
+@import '2-basics/body-element'
+@import '2-basics/selection-colors'
+@import '2-basics/links'
+@import '2-basics/typography'
+@import '2-basics/example-buttons'
+
+
+// 3 - Modules
+@import '3-modules/example-module-name-lockup'
+@import '3-modules/example-fork-tag'
+@import '3-modules/example-flex-video'
+
+
+// 4 - pages
+@import '4-pages/example-page-home'
+//* ---------------------------------------------------------------
+// * Table of Contents
+// * 
+// * 1.0 - Reset & General
+// * 2.0 - Header
+// * 3.0 - Main Content
+// *		3.1 - Homepage
+// *		3.2 - Section Page
+// *		3.3 - Item Page
+// * 4.0 - Footer
+// * 5.0 - Media Queries
+// * 		1200 pixels
+// * 		1000 pixels
+// * 		788 pixels
+// *		570 pixels
+// *		380 pixels
+// *---------------------------------------------------------------
+//*/
+
+$font-one: 'Open Sans', sans-serif
+$font-two: 'Open Sans Condensed', sans-serif
+
+
+@mixin border-radius($radius) 
+	border-radius: $radius
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	-o-border-radius: $radius
+
+
+@mixin box-shadow($shadow...) 
+	box-shadow: $shadow
+	-webkit-box-shadow: $shadow
+	-moz-box-shadow: $shadow
+	-ms-box-shadow: $shadow
+	-o-box-shadow: $shadow
+
+
+@mixin transition($property, $time) 
+	transition: $property $time
+	-webkit-transition: $property $time
+	-moz-transition: $property $time
+	-ms-transition: $property $time
+	-o-transition: $property $time
+
+
+@mixin background-size($size) 
+	background-size: $size
+	-webkit-background-size: $size
+	-moz-background-size: $size
+	-o-background-size: $size
+
+
+@mixin transform($degrees) 
+	transform:rotate($degrees)
+	-webkit-transform:rotate($degrees)
+	-moz-transform:rotate($degrees)
+	-ms-transform:rotate($degrees)
+
+
+
+//**
+//---------------------------------------------------------------
+// * 1.0 - Reset & General
+//---------------------------------------------------------------
+//**/
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing:border-box
+	-moz-box-sizing:border-box
+
+
+*:focus 
+	outline: 0
+
+
+img 
+	border: none	
+	max-width: 100%
+	height: auto
+
+
+iframe 
+	border: 0
+	width: 100%
+
+
+.clear:after 
+	display: block
+	clear: both
+	content: ""
+
+
+body 
+	font-size: 16px
+	font-family: $font-one
+	-webkit-text-size-adjust: 100%
+
+
+p 
+	padding-bottom: 20px
+	font-size: 15px
+
+
+.content-container 
+	width: 100%
+	max-width: 1230px
+	margin: 0 auto
+	position: relative
+	@extend .clear
+
+
+a 
+	color: $light-blue
+	@include transition(all, .3s)
+
+	&:hover 
+		color: $dark-gray
+	
+
+
+header, 
+nav, 
+main, 
+section, 
+article, 
+aside, 
+footer 
+	display: block
+
+
+
+///**
+//---------------------------------------------------------------
+// * Mobile Menu
+//---------------------------------------------------------------
+//**/
+
+
+
+///**
+//---------------------------------------------------------------
+// * 2.0 - Header
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/header-main'
+
+///**
+//---------------------------------------------------------------
+// * 3.0 - Main Content
+// *
+// * 3.1 - Homepage
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/homepage-main'
+
+///**
+//---------------------------------------------------------------
+// * 3.2 - Section Page
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/section-main'
+
+///**
+//---------------------------------------------------------------
+// * 3.3 - Item Page
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/item-main'
+
+///**
+//---------------------------------------------------------------
+// * 4.0 - Footer
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/footer-main'
+
+///**
+//
+//---------------------------------------------------------------
+// * 5.0 - Media Queries
+// *
+// * 1200 pixels
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/queries-1200px'
+
+///**
+//---------------------------------------------------------------
+// * 1000 pixels
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/queries-1000px'
+
+///**
+//---------------------------------------------------------------
+// * 788 pixels
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/queries-788px'
+
+///**
+//---------------------------------------------------------------
+// * 570 pixels
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/queries-570px'
+
+///**
+//---------------------------------------------------------------
+// * 380 pixels
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/queries-380px'
+
+///**
+//---------------------------------------------------------------
+// * Other Media Queries
+//---------------------------------------------------------------
+//**/
+
+@import '4-pages/queries-other'
