@@ -1,8 +1,8 @@
-# http://www.ashfootwearusa.com/
+# project name
 
-Developed by Austin PEterson
+Developed by Austin Peterson
 
-Visit [ashfootwearusa.com/](http://www.ashfootwearusa.com/) for more info.
+Visit [Ysw-Starter-Kit/](https://github.com/theskillwithin/Ysw-Starter-Kit) for more info.
 
 https://github.com/DevTips/DevTips-Starter-Kit
 
