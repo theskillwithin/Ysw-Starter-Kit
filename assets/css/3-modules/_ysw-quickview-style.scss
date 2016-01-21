@@ -1,5 +1,6 @@
 /*REQUIRED CLASSES*/
 #yswQVbox {
+	@extend .main;  // set this to the item/product box that goes into quicview, make sure its not specific to item page.
 	position: absolute;
 	z-index: 997;
 	display: none;
