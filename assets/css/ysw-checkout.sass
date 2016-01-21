@@ -1,0 +1,296 @@
+// 1 - TOOLS
+@import '1-tools/bourbon/bourbon'
+@import '1-tools/fonts'
+@import '1-tools/normalize'
+@import '1-tools/vars'
+
+
+// 2 - BASICS
+@import '2-basics/body-element'
+@import '2-basics/selection-colors'
+@import '2-basics/links'
+@import '2-basics/typography'
+@import '2-basics/buttons'
+
+
+// 3 - Modules
+//@import '3-modules/example-module-name-lockup'
+//@import '3-modules/example-fork-tag'
+//@import '3-modules/example-flex-video'
+//@import '3-modules/aspect-ratio'
+
+// Floating Cart
+@import '3-modules/yswFC'
+
+// pages
+
+@import '4-pages/header-checkout'
+@import '4-pages/queries-788px.sass'
+
+
+
+$font-one: 'Open Sans', sans-serif
+$font-two: 'Open Sans Condensed', sans-serif
+
+
+@mixin border-radius($radius) 
+	border-radius: $radius
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	-o-border-radius: $radius
+
+
+@mixin box-shadow($shadow...) 
+	box-shadow: $shadow
+	-webkit-box-shadow: $shadow
+	-moz-box-shadow: $shadow
+	-ms-box-shadow: $shadow
+	-o-box-shadow: $shadow
+
+
+@mixin transition($property, $time) 
+	transition: $property $time
+	-webkit-transition: $property $time
+	-moz-transition: $property $time
+	-ms-transition: $property $time
+	-o-transition: $property $time
+
+
+@mixin background-size($size) 
+	background-size: $size
+	-webkit-background-size: $size
+	-moz-background-size: $size
+	-o-background-size: $size
+
+
+@mixin transform($degrees) 
+	transform:rotate($degrees)
+	-webkit-transform:rotate($degrees)
+	-moz-transform:rotate($degrees)
+	-ms-transform:rotate($degrees)
+
+
+
+//**
+//---------------------------------------------------------------
+// * 1.0 - Reset & General
+//---------------------------------------------------------------
+//**/
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing:border-box
+	-moz-box-sizing:border-box
+
+
+*:focus 
+	outline: 0
+
+
+img 
+	border: none	
+	max-width: 100%
+	height: auto
+
+
+iframe 
+	border: 0
+	width: 100%
+
+
+.clear:after 
+	display: block
+	clear: both
+	content: ""
+
+
+body 
+	font-size: 16px
+	-webkit-text-size-adjust: 100%
+
+
+p 
+	padding-bottom: 20px
+	font-size: 15px
+
+
+.content-container 
+	width: 100%
+	max-width: 1230px
+	margin: 0 auto
+	position: relative
+	@extend .clear
+
+
+header, 
+nav, 
+main, 
+section, 
+article, 
+aside, 
+footer 
+	display: block
+
+#ys_cartPage
+	.ys_info
+		//border-bottom: 2px solid black
+		margin-bottom: 25px
+	#ys_cart
+		a
+			color: black !important
+
+	#ys_itemOptions
+		list-style-type: none
+	.ys_cost
+		text-align: right
+		padding-top: 10px
+	.ys_unitPrice
+		input.text
+			text-align: center
+			width: 20px
+	.ys_quantity
+		input
+			text-align: center
+			width: 20px
+	#ys_cart .ys_updateQty
+		border-bottom: 2px solid black
+		margin: 5px 0px
+		height: 60px
+	#ys_cart > table > tbody > tr.ys_orderLine.ys_evenRow
+		display: none
+	.ys_pageActions ul 
+		list-style-type: none
+	#ys_proceedContainer
+		text-align: right 
+		margin-top: 30px
+		margin-right: -138px
+	#ys_cart > table > tbody > tr.ys_orderLine.ys_lastRow.ysco_oddRow > td.ys_first
+		color: white
+	#ys_cart > table > tbody > tr.ys_orderLine.ys_lastRow.ysco_oddRow
+		height: 70px
+		vertical-align: bottom
+	#ys_cart > table > tbody > tr  span.ys_itemImg > a > img
+		vertical-align: middle
+	#ys_ofbMessage > div > h2
+		display: none
+	#ys_cart
+		font-size: 12px !important
+
+	#ys_pageMessage
+		max-width: 273px
+		width: 100%
+		position: absolute
+		right: 10px
+		font-size: 12px
+		border-top: 2px solid black
+		top: 120px 
+		padding-left: 25px
+		.rhs-item
+			text-transform: uppercase
+			a 
+				display: block
+		h3 
+			margin-bottom: 10px
+			font-size: 12px
+			width: 100%
+			border-bottom: 1.5px solid black
+		p 
+			font-size: 12px
+
+
+#ys_shippingPage
+	#ys_shippingAddress
+		width: 45%
+		float: left
+	#ys_shippingOptions
+		float: left
+	#ys_cartInfo
+		clear: both
+#ys_proceedContainer
+	width: 100%
+
+#ys_pageBody, #ys_shipBillPage
+	max-width: 95%
+	margin: auto
+
+#yahoo-store-checkout 	
+	#ys_buyerInfo
+	 	display: flex
+	 	flex-wrap: wrap
+	 	justify-content: space-between
+	 	flex-wrap: wrap
+	#ys_shipBillShippingInfo
+		min-width: 319px
+	#ys_shipBillShippingInfo, #ys_shipBillBillingInfo, #ys_shipBillOtherInfo
+		border: none
+		margin: 0px 10px
+		border: none 
+		flex: 2 2
+	#ys_shipBillOtherInfo
+		width: 100%
+
+	h3, h4, p 
+		text-transform: uppercase 
+	h3
+		font-size: 16px
+		margin-top: 20px
+	h4
+		border-bottom: 2px solid black
+		font-size: 14px
+		margin-top: 10px
+	fieldset
+		border: none
+		max-width: 100%
+		width: auto
+	label 
+		display: block
+	hr 
+		margin: 10px
+	.ys_basket
+		width: 100%
+		tr 
+			margin: 8px 0px
+	#billing-email
+		width: 100%
+	#comments
+		width: 100%
+
+
+#ys_pageBody, #ys_yFooter
+	position: static
+	margin-left: 186px
+	max-width: 945px
+	width: calc(100% - 273px - 165px - 30px)
+	margin-right: 10px
+#ys_yFooter
+	margin-top: 30px
+
+#ys_pageBody > form
+	border-top: 2px solid black
+
+@media screen and (max-width: 788px)
+	#ys_shipBillPage
+		input, fieldset
+			max-width: 90% !important
+			width: 90% !important
+		#ys_pageBody
+			margin: auto !important
+	#ys_pageBody, #ys_yFooter
+		margin: 0px 10px
+	#ys_pageBody
+		width: calc(100% - 276px)
+	#ys_cartPage
+		#ys_pageMessage
+			top: 129px
+@media screen and (max-width: 600px)
+	#ys_pageMessage
+		display: none !important
+	#ys_pageBody
+		width: 95% !important
+	#ys_buyerInfo
+		flex-direction: column
+		justify-content: center
+	#ys_pageBody
+		margin: auto !important

@@ -1,0 +1,93 @@
+/*REQUIRED CLASSES*/
+#yswQVbox {
+	position: absolute;
+	z-index: 997;
+	display: none;
+}
+
+#ysw-bgshade {
+	width: 100%;
+	background: #fff;
+	top: 0;
+	position: absolute;
+	display:none;
+}
+
+a.ysw-quickview {
+	position:absolute;
+	display:none;
+	bottom:40px;
+}		
+/*******************************/
+
+
+#yswQVbox {
+	border: solid 1px #000;
+	background: #fff;
+	box-shadow: 3px 3px 5px #888;
+}
+
+#yswQVbox .content{
+	padding: 10px;
+}
+
+#ysw-bgshade {
+	background: #fff;
+}
+
+#quickviewtopbar {
+	border-bottom: solid 1px #000;
+	padding: 8px;
+	font-size: 17px;
+}
+
+#quickviewclose {
+	position: absolute;
+	top:4px;
+	right:5px;
+	padding:3px 6px; 
+	border:solid 1px #8A8A8A;
+	cursor:pointer;
+	border-radius:3px;
+	font-size:14px;
+	line-height: 1;
+	text-shadow: 1px 1px 0 #c4c4c4;
+	box-shadow: 1px 1px 0 #c4c4c4;
+}
+
+#quickviewclose:hover {
+	border-color:#000;
+	box-shadow: 2px 2px 2px #888;
+}
+
+a.ysw-quickview {
+	background: #fff;
+	background-image: -webkit-linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	background-image: -moz-linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	background-image: -ms-linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	background-image: -o-linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	background-image: linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	color: #000; 
+	border:solid 1px #000;
+	border-radius:5px;
+	padding:13px 15px;
+	font-size:16px;
+	font-weight:bold;
+	white-space:nowrap;
+	text-align: center;
+	box-shadow: 2px 2px 2px #888;
+}
+
+a.ysw-quickview:active {
+	text-decoration:none;
+}
+
+a.ysw-quickview.clicked {
+	padding-top: 40px;
+	background: url(/lib/yhst-140243175063418/ysw-qv-loader.gif) 50% 8px no-repeat #fff;
+	background-image:url(/lib/yhst-140243175063418/ysw-qv-loader.gif), -webkit-linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	background-image:url(/lib/yhst-140243175063418/ysw-qv-loader.gif), -moz-linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	background-image:url(/lib/yhst-140243175063418/ysw-qv-loader.gif), -ms-linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	background-image:url(/lib/yhst-140243175063418/ysw-qv-loader.gif), -o-linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);
+	background-image:url(/lib/yhst-140243175063418/ysw-qv-loader.gif), linear-gradient(bottom, #B5B5B5 0%, #FFFFFF 52%);	
+}
