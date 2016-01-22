@@ -1,8 +1,18 @@
 //@prepros-prepend ysw-quickview.js
 
+
+var yswCoreScripts = {
+    itemLoad: function() {},
+    pdpThumbnails: function() {}
+}
+
+
 $(document).ready(function() {
 
-    /*
+
+}), (jQuery);
+
+/*
     // pdp item page thumbnails
 
     $('.pdpthumb').on('click', function(e) {
@@ -169,6 +179,3 @@ $(document).ready(function() {
     theWindow.resize(mobileSubCatDownArrow);
     theWindow.resize(showTheCurrentSubCat);
 */
-
-
-}), (jQuery);
